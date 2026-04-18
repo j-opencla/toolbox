@@ -16,6 +16,7 @@
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
+    <!-- 导航栏 -->
     <nav class="gradient-bg text-white py-4 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
             <h1 class="text-2xl font-bold flex items-center gap-2">
@@ -31,6 +32,7 @@
         </div>
     </nav>
 
+    <!-- 横幅 -->
     <header class="gradient-bg text-white py-16 text-center">
         <div class="container mx-auto px-4">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">发现实用Windows小工具</h2>
@@ -56,6 +58,7 @@
         </div>
     </header>
 
+    <!-- 统计数据 -->
     <section class="container mx-auto px-4 -mt-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="stats-card rounded-xl p-4 text-center shadow-lg">
@@ -77,12 +80,14 @@
         </div>
     </section>
 
+    <!-- 工具列表 -->
     <main class="container mx-auto px-4 py-12">
         <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">📦 全部工具</h3>
         <div id="tools-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         </div>
     </main>
 
+    <!-- 使用说明 -->
     <section class="bg-white py-16">
         <div class="container mx-auto px-4">
             <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">📖 使用说明</h3>
@@ -121,6 +126,7 @@
         </div>
     </section>
 
+    <!-- 支持作者 -->
     <section id="support" class="bg-gradient-to-br from-purple-50 to-blue-50 py-16">
         <div class="container mx-auto px-4 text-center">
             <h3 class="text-2xl font-bold text-gray-800 mb-4">💝 支持作者</h3>
@@ -128,14 +134,23 @@
                 如果这些工具对您有帮助，欢迎扫码打赏。您的支持是我持续更新的动力！
             </p>
             <div class="flex justify-center gap-8 flex-wrap">
+                <!-- 微信赞赏码 -->
                 <div class="bg-white p-6 rounded-2xl shadow-md">
                     <img src="wechat-qr.jpg" alt="微信赞赏码" class="w-48 h-48 rounded-xl mb-3 mx-auto object-cover">
                     <p class="font-medium text-gray-700">💚 微信</p>
+                </div>
+                <!-- 支付宝赞赏码 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <div id="alipay-qr" class="w-48 h-48 bg-gray-100 rounded-xl flex items-center justify-center mb-3 mx-auto border-2 border-dashed border-gray-300">
+                        <span class="text-gray-400 text-sm">等待上传</span>
+                    </div>
+                    <p class="font-medium text-gray-700">💙 支付宝</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- 注意事项 -->
     <section class="bg-yellow-50 py-8">
         <div class="container mx-auto px-4">
             <div class="max-w-3xl mx-auto text-center">
@@ -148,6 +163,7 @@
         </div>
     </section>
 
+    <!-- 页脚 -->
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <p class="mb-2">© 2026 工具箱 - 专注分享实用Windows小工具</p>
@@ -156,26 +172,104 @@
     </footer>
 
     <script>
+        // 工具数据
         const downloadLink = "https://pan.baidu.com/s/1vMhzVHpe-I_YCk8-IGaa3A";
         const downloadCode = "h9x4";
 
         const tools = [
-            { name: "屏幕截图工具", description: "快速截取屏幕任意区域的截图工具。操作简单，截图自动保存到桌面。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📸" },
-            { name: "WiFi密码查看器", description: "查看本机已连接过的所有WiFi网络密码。再也不用担心忘记WiFi密码了。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📶" },
-            { name: "系统信息查看器", description: "一键查看电脑详细配置信息，包括CPU、内存、显卡、硬盘等。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "💻" },
-            { name: "批量文件重命名", description: "快速批量重命名文件夹内的文件。支持自定义前缀、自动编号。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📁" },
-            { name: "进程管理器", description: "查看当前运行的所有进程，按CPU或内存排序。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "⚙️" },
-            { name: "定时关机工具", description: "设置电脑定时关机、重启或取消关机计划。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "⏰" },
-            { name: "磁盘清理向导", description: "一键清理临时文件、回收站、浏览器缓存等垃圾文件。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "🧹" },
-            { name: "快捷方式管理器", description: "管理桌面和开始菜单的快捷方式。支持创建、删除、备份。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "🔗" },
-            { name: "DNS刷新工具", description: "一键更换DNS服务器，支持阿里、百度、Google、Cloudflare等常用DNS。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "🌐" },
-            { name: "网络速度测试", description: "快速测试网络连接状态、延迟和带宽。查看本地IP、网关、DNS等。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📊" }
+            {
+                name: "屏幕截图工具",
+                description: "快速截取屏幕任意区域的截图工具。操作简单，截图自动保存到桌面。适合办公、教程制作等场景使用。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "📸"
+            },
+            {
+                name: "WiFi密码查看器",
+                description: "查看本机已连接过的所有WiFi网络密码。再也不用担心忘记WiFi密码了，轻松查看即得。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "📶"
+            },
+            {
+                name: "系统信息查看器",
+                description: "一键查看电脑详细配置信息，包括CPU、内存、显卡、硬盘等。了解你的电脑，只需一键。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "💻"
+            },
+            {
+                name: "批量文件重命名",
+                description: "快速批量重命名文件夹内的文件。支持自定义前缀、自动编号。整理照片、文档的好帮手。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "📁"
+            },
+            {
+                name: "进程管理器",
+                description: "查看当前运行的所有进程，按CPU或内存排序。帮助您快速找到占用资源过多的程序。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "⚙️"
+            },
+            {
+                name: "定时关机工具",
+                description: "设置电脑定时关机、重启或取消关机计划。睡前看电影、定时下载任务的贴心助手。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "⏰"
+            },
+            {
+                name: "磁盘清理向导",
+                description: "一键清理临时文件、回收站、浏览器缓存等垃圾文件。释放磁盘空间，让电脑跑得更快。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "🧹"
+            },
+            {
+                name: "快捷方式管理器",
+                description: "管理桌面和开始菜单的快捷方式。支持创建、删除、备份快捷方式。桌面整理必备工具。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "🔗"
+            },
+            {
+                name: "DNS刷新工具",
+                description: "一键更换DNS服务器，支持阿里、百度、Google、Cloudflare等常用DNS。解决DNS污染问题。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "🌐"
+            },
+            {
+                name: "网络速度测试",
+                description: "快速测试网络连接状态、延迟和带宽。查看本地IP、网关、DNS等网络信息。",
+                version: "v1.0.0",
+                size: "1 KB",
+                platform: "Windows 7/8/10/11",
+                downloadUrl: downloadLink,
+                icon: "📊"
+            }
         ];
 
-        function showDownload() {
-            alert('📦 下载链接：\n\n' + downloadLink + '\n\n🔑 提取码：' + downloadCode + '\n\n复制链接到浏览器打开即可下载！');
-        }
-
+        // 渲染工具卡片
         function renderTools() {
             const container = document.getElementById('tools-container');
             container.innerHTML = tools.map(tool => `
@@ -202,6 +296,10 @@
                     </div>
                 </div>
             `).join('');
+        }
+
+        function showDownload() {
+            alert('📦 下载链接：\n\n' + downloadLink + '\n\n🔑 提取码：' + downloadCode + '\n\n复制链接到浏览器打开即可下载！');
         }
 
         renderTools();
