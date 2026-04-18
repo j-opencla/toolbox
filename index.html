@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工具箱 - 发现实用Windows小工具</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        * { font-family: 'Noto Sans SC', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .download-btn { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+        .download-btn:hover { background: linear-gradient(135deg, #0d7d6f 0%, #2dcc68 100%); }
+        .stats-card { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="gradient-bg text-white py-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold flex items-center gap-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.126.07 2.572-1.065z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                工具箱
+            </h1>
+            <a href="#support" class="bg-white text-purple-600 px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition">
+                支持作者
+            </a>
+        </div>
+    </nav>
+
+    <header class="gradient-bg text-white py-16 text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">发现实用Windows小工具</h2>
+            <p class="text-xl opacity-90 mb-8">10款精选批处理工具，让您的电脑更强大</p>
+            <div class="flex justify-center gap-4 flex-wrap">
+                <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    完全免费
+                </span>
+                <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    安全无毒
+                </span>
+                <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    无需安装
+                </span>
+                <span class="bg-white/20 px-4 py-2 rounded-full text-sm flex items-center gap-1">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    持续更新
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <section class="container mx-auto px-4 -mt-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="stats-card rounded-xl p-4 text-center shadow-lg">
+                <div class="text-3xl font-bold text-purple-600">10+</div>
+                <div class="text-gray-600 text-sm">精选工具</div>
+            </div>
+            <div class="stats-card rounded-xl p-4 text-center shadow-lg">
+                <div class="text-3xl font-bold text-purple-600">0</div>
+                <div class="text-gray-600 text-sm">费用</div>
+            </div>
+            <div class="stats-card rounded-xl p-4 text-center shadow-lg">
+                <div class="text-3xl font-bold text-purple-600">100%</div>
+                <div class="text-gray-600 text-sm">安全</div>
+            </div>
+            <div class="stats-card rounded-xl p-4 text-center shadow-lg">
+                <div class="text-3xl font-bold text-purple-600">7x24</div>
+                <div class="text-gray-600 text-sm">可用</div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-4 py-12">
+        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">📦 全部工具</h3>
+        <div id="tools-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        </div>
+    </main>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">📖 使用说明</h3>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <span class="bg-purple-100 text-purple-600 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</span>
+                        <div>
+                            <h4 class="font-bold text-gray-800">下载工具</h4>
+                            <p class="text-gray-600 text-sm">点击任意工具的下载按钮，获取百度网盘链接</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <span class="bg-purple-100 text-purple-600 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</span>
+                        <div>
+                            <h4 class="font-bold text-gray-800">保存到网盘</h4>
+                            <p class="text-gray-600 text-sm">从网盘下载到本地，无需解压</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <span class="bg-purple-100 text-purple-600 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</span>
+                        <div>
+                            <h4 class="font-bold text-gray-800">双击运行</h4>
+                            <p class="text-gray-600 text-sm">直接双击bat文件即可使用，无需安装</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <span class="bg-purple-100 text-purple-600 w-8 h-8 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</span>
+                        <div>
+                            <h4 class="font-bold text-gray-800">开始使用</h4>
+                            <p class="text-gray-600 text-sm">按照提示操作即可，功能简单易用</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="support" class="bg-gradient-to-br from-purple-50 to-blue-50 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">💝 支持作者</h3>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">
+                如果这些工具对您有帮助，欢迎扫码打赏。您的支持是我持续更新的动力！
+            </p>
+            <div class="flex justify-center gap-8 flex-wrap">
+                <div class="bg-white p-6 rounded-2xl shadow-md">
+                    <img src="wechat-qr.jpg" alt="微信赞赏码" class="w-48 h-48 rounded-xl mb-3 mx-auto object-cover">
+                    <p class="font-medium text-gray-700">💚 微信</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-yellow-50 py-8">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h4 class="font-bold text-yellow-800 mb-2">⚠️ 使用提示</h4>
+                <p class="text-yellow-700 text-sm">
+                    部分工具（如WiFi密码查看器）需要以管理员身份运行。<br>
+                    右键点击bat文件，选择"以管理员身份运行"即可。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">© 2026 工具箱 - 专注分享实用Windows小工具</p>
+            <p class="text-gray-400 text-sm">所有工具均为原创，MIT开源协议 · 请勿用于非法用途</p>
+        </div>
+    </footer>
+
+    <script>
+        const downloadLink = "https://pan.baidu.com/s/1vMhzVHpe-I_YCk8-IGaa3A";
+        const downloadCode = "h9x4";
+
+        const tools = [
+            { name: "屏幕截图工具", description: "快速截取屏幕任意区域的截图工具。操作简单，截图自动保存到桌面。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📸" },
+            { name: "WiFi密码查看器", description: "查看本机已连接过的所有WiFi网络密码。再也不用担心忘记WiFi密码了。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📶" },
+            { name: "系统信息查看器", description: "一键查看电脑详细配置信息，包括CPU、内存、显卡、硬盘等。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "💻" },
+            { name: "批量文件重命名", description: "快速批量重命名文件夹内的文件。支持自定义前缀、自动编号。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📁" },
+            { name: "进程管理器", description: "查看当前运行的所有进程，按CPU或内存排序。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "⚙️" },
+            { name: "定时关机工具", description: "设置电脑定时关机、重启或取消关机计划。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "⏰" },
+            { name: "磁盘清理向导", description: "一键清理临时文件、回收站、浏览器缓存等垃圾文件。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "🧹" },
+            { name: "快捷方式管理器", description: "管理桌面和开始菜单的快捷方式。支持创建、删除、备份。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "🔗" },
+            { name: "DNS刷新工具", description: "一键更换DNS服务器，支持阿里、百度、Google、Cloudflare等常用DNS。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "🌐" },
+            { name: "网络速度测试", description: "快速测试网络连接状态、延迟和带宽。查看本地IP、网关、DNS等。", version: "v1.0.0", size: "1 KB", platform: "Windows 7/8/10/11", icon: "📊" }
+        ];
+
+        function showDownload() {
+            alert('📦 下载链接：\n\n' + downloadLink + '\n\n🔑 提取码：' + downloadCode + '\n\n复制链接到浏览器打开即可下载！');
+        }
+
+        function renderTools() {
+            const container = document.getElementById('tools-container');
+            container.innerHTML = tools.map(tool => `
+                <div class="bg-white rounded-2xl p-6 shadow-md card-hover transition-all duration-300">
+                    <div class="flex items-start gap-4 mb-4">
+                        <span class="text-4xl">${tool.icon}</span>
+                        <div class="flex-1">
+                            <h4 class="text-xl font-bold text-gray-800">${tool.name}</h4>
+                            <div class="flex gap-2 mt-1 flex-wrap">
+                                <span class="bg-purple-100 text-purple-600 text-xs px-2 py-1 rounded">${tool.version}</span>
+                                <span class="bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded">${tool.platform}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm leading-relaxed">${tool.description}</p>
+                    <div class="flex justify-between items-center pt-3 border-t border-gray-100">
+                        <span class="text-sm text-gray-400">${tool.size}</span>
+                        <button onclick="showDownload()" class="download-btn text-white px-4 py-2 rounded-lg font-medium transition inline-flex items-center gap-2 text-sm">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                            百度网盘
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        renderTools();
+    </script>
+</body>
+</html>
